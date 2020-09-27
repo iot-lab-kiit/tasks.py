@@ -6,14 +6,14 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-      python-version: {{ 3.8 }}
+      python_version: {{ 3.8 }}
 
     steps:
     - uses: actions/checkout@v2
-    - name: Set Up Python ${{ python-version }}
+    - name: Set Up Python ${{ python_version }}
       uses: actions/setup-python@v2
       with:
-        python-version: ${{ python-version }}
+        python-version: ${{ python_version }}
 
     - name: install dependencies
       run: |
