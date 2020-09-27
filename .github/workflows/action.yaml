@@ -5,8 +5,8 @@ on: [push]
 jobs:
   build:
     runs-on: ubuntu-latest
-    strategy:
-      python-version: 3.8
+    env:
+      python-version: {{ 3.8 }}
 
     steps:
     - uses: actions/checkout@v2
