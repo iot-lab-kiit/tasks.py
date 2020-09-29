@@ -25,3 +25,20 @@ def sortLexographic(string:str) -> List[str]:
 
     return ["alphabetical","example","hello","how","in","is","manner","sort","the","this","to","word"]
 
+def calculateDifferenceBetweenTimePeriod(time1:str,time2:str) -> str:
+    """
+    Calculates difference between two times given in input and returns
+    difference
+    >>> calculateDifferenceBetweenTimePeriod("00:00:00","23:59:59")
+    '23:59:59'
+    """
+    #Change below this
+
+    
+    return "23:59:59"
+
+def printOwnSourceCode():
+    """
+    Show the source code of this file
+    """
+
