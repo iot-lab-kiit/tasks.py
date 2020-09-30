@@ -10,7 +10,12 @@ jobs:
       - uses: trilom/file-changes-action@v1.2.3
       - name: Checks for new files
         run: |
-           echo '${{ steps.file_changes.outputs.files_added}}'
+           if [${{ steps.file_changes.outputs.files_added}} -eq '' ]
+           then
+           echo "No new files"
+           else
+           exit 1
+           fi
   build:
     runs-on: ubuntu-latest
 
