@@ -72,7 +72,7 @@ def sum_array(arr:List[int]) -> int:
     6
     """
 
-    return 6
+    return sum(arr)
 
 def number_of_elements(string:str) -> int:
     """
