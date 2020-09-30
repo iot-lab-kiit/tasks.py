@@ -43,7 +43,7 @@ def quotient_and_remainder(a:int,b:int) -> Tuple[int,int]:
 
     """
 
-    return (1,2)
+    return (a//b,a%b)
 
 def average(a:int,b:int) -> float:
     """
