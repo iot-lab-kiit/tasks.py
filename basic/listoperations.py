@@ -5,7 +5,7 @@ def addMatrix(m1:List[List[int]],m2:List[List[int]]) -> list:
     """
     Returns addition of two matrices
     >>> addMatrix(m1=[[0, 1, 2],[3, 4, 5],[6, 7, 8]],m2=[[1, 2, 3],[4, 5, 6],[7, 8, 9]])
-    [[1, 2, 5], [7, 9, 11], [13, 15, 17]]
+    [[1, 3, 5], [7, 9, 11], [13, 15, 17]]
     """
     m=[]
     for i in range(len(m1)):
