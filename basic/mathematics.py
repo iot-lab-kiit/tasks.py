@@ -54,6 +54,6 @@ def average(a:int,b:int) -> float:
     2.0
 
     """
-    return 2.0
+    return (a+b)/2
 
 
