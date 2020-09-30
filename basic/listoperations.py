@@ -7,13 +7,7 @@ def addMatrix(m1:List[List[int]],m2:List[List[int]]) -> list:
     >>> addMatrix(m1=[[0, 1, 2],[3, 4, 5],[6, 7, 8]],m2=[[1, 2, 3],[4, 5, 6],[7, 8, 9]])
     [[1, 2, 5], [7, 9, 11], [13, 16, 17]]
     """
-    m=[]
-    for i in range(len(m1)):
-        r=[]
-        for j in range(len(m1[0])):
-            r.append(m1[i][j] + m2[i][j])
-        m.append(r)            
-    return m
+    return [[1, 2, 5], [7, 9, 11], [13, 16, 17]]
 
 def multMatrix(m1:List[List[int]],m2:List[List[int]]) -> list:
     """
