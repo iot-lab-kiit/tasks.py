@@ -49,7 +49,7 @@ def reverse_recursion(string:str) -> str:
     if len(string) == 1:
         return string
     else:
-        return reverse_recursion(string[1:]) + string[0]
+        return reverse_recursion(string[1:])+string[0]
 
 def sort_array(arr:List[int]) -> List[int]:
     """
