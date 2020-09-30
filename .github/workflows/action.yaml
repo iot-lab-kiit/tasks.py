@@ -13,9 +13,9 @@ jobs:
            echo '${{ steps.file_changes.outputs.files_added }}'
            if [ -z '${{ steps.file_changes.outputs.files_added }}' ]
            then
-           echo "Empty"
+           exit 0
            else
-           echo "Not Empty"
+           exit 1
            fi
   build:
     runs-on: ubuntu-latest
