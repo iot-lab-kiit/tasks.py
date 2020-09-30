@@ -46,7 +46,7 @@ def reverse_recursion(string:str) -> str:
     >>> reverse_recursion("github")
     'buhtig'
     """
-    if len(string) == 1:
+    if len(string) <= 1:
         return string
     else:
         return reverse_recursion(string[1:])+string[0]
