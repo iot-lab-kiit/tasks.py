@@ -87,7 +87,12 @@ def largest_of_three(a:int,b:int,c:int) -> int:
     >>> largest_of_three(1,2,3)
     3
     """
-    return 3
+    if a>b and a>c:
+        return a
+    elif b>c and b>a:
+        return b
+    else:
+        return c
 
 def number_of_vowels_and_consonants(string:str) -> Tuple[int,int]:
     """
