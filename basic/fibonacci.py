@@ -1,5 +1,5 @@
 from typing import List
-
+import nth_fibonacci
 
 def fibonacci(number:int) -> int:
     """
@@ -9,20 +9,7 @@ def fibonacci(number:int) -> int:
     55
     
     """
-    a = 0
-    b = 1
-    if number < 0: 
-        print("Incorrect input") 
-    elif number == 0: 
-        return a 
-    elif number == 1: 
-        return b 
-    else: 
-        for _ in range(2,number): 
-            c = a + b 
-            a = b 
-            b = c 
-        return b
+    return nth_fibonacci.fibonacci(number)
 
 def fibonacciSequence(number:int) -> List[int]:
     """
@@ -34,4 +21,4 @@ def fibonacciSequence(number:int) -> List[int]:
 
 
 if __name__ == "__main__":
-    fibonacci(number=55)    
+    fibonacci(number=55)
