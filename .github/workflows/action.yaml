@@ -11,7 +11,8 @@ jobs:
       - name: Checks for new files
         run: |
            a=${{ steps.file_changes.outputs.files_added }}
-           echo ${#a[@]}
+           list=("$a[@]")
+           echo ${#list[*]}
            for i in ${{ steps.file_changes.outputs.files_added }}
            do
            exit 1
