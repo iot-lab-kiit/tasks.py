@@ -1,5 +1,4 @@
 from typing import List
-import nth_fibonacci
 
 def fibonacci(number:int) -> int:
     """
