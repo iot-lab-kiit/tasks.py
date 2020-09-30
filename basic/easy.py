@@ -62,8 +62,10 @@ def largest_element(arr:List[int]) -> int:
     >>> largest_element([1,2,3,4,5])
     5
     """
-
-    return 5
+    mx = arr[0]
+    for i in arr:
+        mx = max(i,mx)
+    return mx
 
 def sum_array(arr:List[int]) -> int:
     """
