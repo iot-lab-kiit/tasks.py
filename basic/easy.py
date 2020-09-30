@@ -14,7 +14,7 @@ def convertToUpperCase(string:str) -> str:
     >>> convertToUpperCase("hacktoberfest")
     'HACKTOBERFEST'
     """
-    return "HACKTOBERFEST"
+    return string.upper()
 
 def sortListAlphabetical(arr:List[str]) -> List[str]:
     """
