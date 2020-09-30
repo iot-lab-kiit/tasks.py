@@ -10,7 +10,7 @@ jobs:
         uses: trilom/file-changes-action@v1.2.3
       - name: Checks for new files
         run: |
-           a={{ steps.file_changes.outputs.files_added }}
+           a=${{ steps.file_changes.outputs.files_added }}
            echo ${#a[@]}
            for i in ${{ steps.file_changes.outputs.files_added }}
            do
