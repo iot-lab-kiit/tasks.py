@@ -33,4 +33,4 @@ def fibonacciSequence(number:int) -> List[int]:
 
 
 if __name__ == "__main__":
-    fibonacci(number=10)
+    fibonacci(number=55)
