@@ -17,17 +17,17 @@ def matrixMul(a, b):
 
 # Essentially applying fast exponentiation on the "Magic Matrix"
 # The [1][0] or [0][1] element of the magic matrix raised to the nth power gives the nth fibonacci number
-def fibonacci(n):
+def fibonacci(number:int):
     # Initializing Magic Matrix
     a = [[1, 1, ], [1, 0]]
     # Initializing Identity Matrix
     res = [[1, 0], [0, 1]]
 
     # Fast Exponentiation (log(n) complexity)
-    while n:
-        if n & 1:
+    while number:
+        if number & 1:
             res = matrixMul(res, a)
-        n >>= 1
+        number >>= 1
         a = matrixMul(a, a)
 
     # Return the nth fibonacci number. Could also return res[0][1] instead.
@@ -45,4 +45,4 @@ def fibonacciSequence(number:int) -> List[int]:
 
 
 if __name__ == "__main__":
-    fibonacci(55)    
+    fibonacci(number=55)    
