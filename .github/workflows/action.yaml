@@ -19,6 +19,7 @@ jobs:
            echo "Not Empty"
            else
            exit 1
+           fi
            
   build:
     runs-on: ubuntu-latest
