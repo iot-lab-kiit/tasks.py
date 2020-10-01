@@ -35,6 +35,8 @@ def main():
     27. Return fibonacci sequence up to the given number
     """)
 
-
-if __name__ == "__main__":
-    main()
+//solution of task 1
+# cook your dish here
+list = [1,2,2,3,4,5,5]
+ans = len(set(list))
+print(ans)
