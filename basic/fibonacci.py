@@ -1,7 +1,7 @@
 from typing import List
 
 # fibonacci numbers has property that f(n)=f(n-1)+f(n-2)
-def fibonacci(number:int) -> int:
+def fibonacci(number):
    if number<0: 
         print("Incorrect input") 
     # First Fibonacci number is 0 
@@ -13,7 +13,7 @@ def fibonacci(number:int) -> int:
     else: 
         return Fibonacci(number-1)+Fibonacci(number-2)  
 
-def fibonacciSequence(number:int) -> List[int]:
+def fibonacciSequence(number):
     fibonacci_numbers = [0, 1]
     for i in range(2,number):
         fibonacci_numbers.append(fibonacci_numbers[i-1]+fibonacci_numbers[i-2])
