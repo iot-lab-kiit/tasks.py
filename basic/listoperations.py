@@ -5,10 +5,15 @@ def addMatrix(m1:List[List[int]],m2:List[List[int]]) -> list:
     """
     Returns addition of two matrices
     >>> addMatrix(m1=[[0, 1, 2],[3, 4, 5],[6, 7, 8]],m2=[[1, 2, 3],[4, 5, 6],[7, 8, 9]])
-    [[1, 2, 5], [7, 9, 11], [13, 16, 17]]
+    [[1, 3, 5], [7, 9, 11], [13, 15, 17]]
     """
-    
-    return [[1,2,5],[7,9,11],[13,16,17]]
+    m=[]
+    for i in range(len(m1)):
+        r=[]
+        for j in range(len(m1[0])):
+            r.append(m1[i][j] + m2[i][j])
+        m.append(r)            
+    return m
 
 def multMatrix(m1:List[List[int]],m2:List[List[int]]) -> list:
     """
@@ -23,8 +28,10 @@ def sortLexographic(string:str) -> List[str]:
     ['alphabetical', 'example', 'hello', 'how', 'in', 'is', 'manner', 'sort', 'the', 'this', 'to', 'word']
     """
 
-    return ["alphabetical","example","hello","how","in","is","manner","sort","the","this","to","word"]
-
+    string = string.split()
+    string = sorted(string)
+    return string
+    
 def calculateDifferenceBetweenTimePeriod(time1:str,time2:str) -> str:
     """
     Calculates difference between two times given in input and returns

@@ -1,7 +1,7 @@
 from typing import List, Tuple
 
 
-def countDistinct(arr:List[int]) -> int:
+def countDistinct(arr: List[int]) -> int:
     """
     >>> countDistinct([1,2,2,3,4])
     3
@@ -9,28 +9,32 @@ def countDistinct(arr:List[int]) -> int:
 
     return 3
 
-def convertToUpperCase(string:str) -> str:
+
+def convertToUpperCase(string: str) -> str:
     """
     >>> convertToUpperCase("hacktoberfest")
     'HACKTOBERFEST'
     """
-    return "HACKTOBERFEST"
+    return string.upper()
 
-def sortListAlphabetical(arr:List[str]) -> List[str]:
+
+def sortListAlphabetical(arr: List[str]) -> List[str]:
     """
     >>> sortListAlphabetical(["welcome","to","open","source"])
     ['open', 'source', 'to', 'welcome']
     """
     return ['open', 'source', 'to', 'welcome']
 
-def findStringLength(string:str) -> int:
+
+def findStringLength(string: str) -> int:
     """
     >>> findStringLength("IoT Lab KiiT")
     12
     """
     return 12
 
-def concatenate(string1:str,string2:str) -> str:
+
+def concatenate(string1: str, string2: str) -> str:
     """
     Concatenate two strings without using concat()
 
@@ -39,33 +43,72 @@ def concatenate(string1:str,string2:str) -> str:
     """
     return 'helloworld'
 
-def reverse_recursion(string:str) -> str:
+
+def reverse_recursion(string: str) -> str:
     """
     Reverse string using recursion
 
     >>> reverse_recursion("github")
     'buhtig'
     """
-    return 'buhtig'
+    if len(string) <= 1:
+        return string
+    else:
+        return reverse_recursion(string[1:]) + string[0]
 
-def sort_array(arr:List[int]) -> List[int]:
+
+def sort_array(arr: List[int]) -> List[int]:
     """
     Sort given array without using sort()
     >>> sort_array([4,3,2,1])
     [1, 2, 3, 4]
-    """
-    return [1,2,3,4]
 
-def largest_element(arr:List[int]) -> int:
+    Here, I'm going to use an algorithm called Merge Sort.
+    """
+    if len(arr) > 1:
+        mid = len(arr) // 2
+        left = arr[:mid]
+        right = arr[mid:]
+        sort_array(left)
+        sort_array(right)
+        i = 0
+        j = 0
+        k = 0
+        len_left = len(left)
+        len_right = len(right)
+        while i < len_left and j < len_right:
+            if left[i] < right[j]:
+                arr[k] = left[i]
+                i += 1
+            else:
+                arr[k] = right[j]
+                j += 1
+            k += 1
+        while i < len_left:
+            arr[k] = left[i]
+            i += 1
+            k += 1
+        while j < len_right:
+            arr[k] = right[j]
+            j += 1
+            k += 1
+        
+    return arr
+
+
+def largest_element(arr: List[int]) -> int:
     """
     Find the largest element in the array
     >>> largest_element([1,2,3,4,5])
     5
     """
+    mx = arr[0]
+    for i in arr:
+        mx = max(i, mx)
+    return mx
 
-    return 5
 
-def sum_array(arr:List[int]) -> int:
+def sum_array(arr: List[int]) -> int:
     """
     Find sum of all the array elements
     >>> sum_array([1,2,3])
@@ -74,14 +117,16 @@ def sum_array(arr:List[int]) -> int:
 
     return 6
 
-def number_of_elements(string:str) -> int:
+
+def number_of_elements(string: str) -> int:
     """
     Find number of elements in the string
 
 
     """
 
-def largest_of_three(a:int,b:int,c:int) -> int:
+
+def largest_of_three(a: int, b: int, c: int) -> int:
     """
     Find largest of 3 given numbers
     >>> largest_of_three(1,2,3)
@@ -89,16 +134,19 @@ def largest_of_three(a:int,b:int,c:int) -> int:
     """
     return 3
 
-def number_of_vowels_and_consonants(string:str) -> Tuple[int,int]:
+
+def number_of_vowels_and_consonants(string: str) -> Tuple[int, int]:
     """
     Returns number of vowels and consonants in a given string
     >>> number_of_vowels_and_consonants("IoT Lab KiiT")
     (5, 5)
     """
-    return (5,5)
+    return (5, 5)
 
-def swap(a:int,b:int):
+
+def swap(a: int, b: int):
     """
     Swap two numbers
     """
     a,b = b,a
+
