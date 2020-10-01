@@ -10,13 +10,16 @@ jobs:
         uses: trilom/file-changes-action@v1.2.3
       - name: Checks for new files
         run: |
+           set -eu
            a=${{ steps.file_changes.outputs.files_added }}
            list=("$a[@]")
            echo ${#list[*]}
-           for i in ${{ steps.file_changes.outputs.files_added }}
-           do
+           if [[ ${list[@]} ]]
+           then
+           echo "Not Empty"
+           else
            exit 1
-           done
+           
   build:
     runs-on: ubuntu-latest
 
