@@ -30,8 +30,8 @@ def combination(n:int,r:int) -> int:
     >>> combination(5,3)
     10
     """
-    #Change the code below
-    return 10
+    
+    return int(factorial(n) / (factorial(r) * factorial(n-r)))
 
 def multfloat(a:float,b:float) -> float:
     """
@@ -68,3 +68,4 @@ def average(a:int,b:int) -> float:
     return (a+b)/2
 
 
+print(combination(5,3))
