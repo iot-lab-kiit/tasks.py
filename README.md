@@ -17,7 +17,7 @@
 <p align="center"> A Menu driven python program that covers code for various popular problems.
 </p>
 
-**Contributing to this repo will count against one of the PRs for HacktoberFest2020 only if submitted between 1<sup>st</sup> October and 31<sup>st</sup> October.**
+**Contributing to this repo will count against one of the PRs for HacktoberFest2020 only if submitted between 1<sup>st</sup> October and 31 2020<sup>st</sup> October.**
 
 **Please refer to _CONTRIBUTING.md_ for the same.**
 
