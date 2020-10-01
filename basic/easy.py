@@ -41,7 +41,7 @@ def concatenate(string1: str, string2: str) -> str:
     >>> concatenate("hello","world")
     'helloworld'
     """
-    return 'helloworld'
+    return string1 + string2
 
 
 def reverse_recursion(string: str) -> str:
