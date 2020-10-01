@@ -1,5 +1,17 @@
+import math
 from typing import Tuple
 
+
+def factorial(n:int) -> int:
+    """
+    Returns the factorial of given n
+    >>> factorial(6)
+    720
+    """
+
+    if (n<=1):
+        return 1
+    return n * factorial(n-1)
 
 def permutation(n:int,r:int) -> int:
     """
@@ -9,7 +21,7 @@ def permutation(n:int,r:int) -> int:
     60
     """
 
-    return 60
+    return math.floor(factorial(n) / factorial(n-r))
 
 def combination(n:int,r:int) -> int:
     """
@@ -18,8 +30,8 @@ def combination(n:int,r:int) -> int:
     >>> combination(5,3)
     10
     """
-    #Change the code below
-    return 10
+    
+    return int(factorial(n) / (factorial(r) * factorial(n-r)))
 
 def multfloat(a:float,b:float) -> float:
     """
