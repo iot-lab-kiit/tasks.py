@@ -27,7 +27,7 @@ def multfloat(a:float,b:float) -> float:
     a * b without using the '*' multiplication operator
 
     >>> multfloat(5,3)
-    15
+    15.0
     """
 
     return a / (1 / b)
