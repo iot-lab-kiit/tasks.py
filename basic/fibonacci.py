@@ -17,7 +17,7 @@ def fibonacci(number:int) -> int:
     elif number == 1: 
         return b 
     else: 
-        for _ in range(2, number): 
+        for _ in range(2, number+1): 
             c = a + b 
             a = b 
             b = c 
@@ -33,4 +33,4 @@ def fibonacciSequence(number:int) -> List[int]:
 
 
 if __name__ == "__main__":
-    fibonacci(number=55)
+    print(fibonacci(number=10))
