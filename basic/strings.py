@@ -26,6 +26,7 @@ def recursive_len(x):
     return 1 + recursive_len(x[1:])
 
 
+
 def time_difference(time1: str, time2: str, fmt: str = '%H:%M:%S') -> str:
     """
     Returns the difference between `time1` from `time2` as a sting.
@@ -42,6 +43,24 @@ def time_difference(time1: str, time2: str, fmt: str = '%H:%M:%S') -> str:
 
     # Subtracts the largest from the smallest datetime object
     return str(max(d1, d2) - min(d1, d2))
+
+
+def elements_in_string(str): 
+  """
+    Return the number of Elements in a string 
+    
+    Example:
+    >>> a = "roshan"
+    >>> elements_in_string(a)
+    >>6 
+
+  """
+        
+    counter = 0    
+    for i in str: 
+        counter += 1
+    return counter 
+  
 
 def self_source():
     """
