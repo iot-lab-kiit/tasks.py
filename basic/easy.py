@@ -148,3 +148,5 @@ def swap(a: int, b: int):
     """
     Swap two numbers
     """
+    a,b = b,a
+
