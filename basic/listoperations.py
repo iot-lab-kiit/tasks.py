@@ -28,8 +28,10 @@ def sortLexographic(string:str) -> List[str]:
     ['alphabetical', 'example', 'hello', 'how', 'in', 'is', 'manner', 'sort', 'the', 'this', 'to', 'word']
     """
 
-    return ["alphabetical","example","hello","how","in","is","manner","sort","the","this","to","word"]
-
+    string = string.split()
+    string = sorted(string)
+    return string
+    
 def calculateDifferenceBetweenTimePeriod(time1:str,time2:str) -> str:
     """
     Calculates difference between two times given in input and returns
