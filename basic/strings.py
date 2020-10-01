@@ -46,7 +46,7 @@ def time_difference(time1: str, time2: str, fmt: str = '%H:%M:%S') -> str:
 
 
 def elements_in_string(str): 
-  """
+   """
     Return the number of Elements in a string 
     
     Example:
@@ -54,8 +54,7 @@ def elements_in_string(str):
     >>> elements_in_string(a)
     >>6 
 
-  """
-        
+   """        
     counter = 0    
     for i in str: 
         counter += 1
