@@ -27,11 +27,10 @@ def multfloat(a:float,b:float) -> float:
     a * b without using the '*' multiplication operator
 
     >>> multfloat(5,3)
-    15
+    15.0
     """
 
-    #Change the code below
-    return a*b
+    return a / (1 / b)
 
 def quotient_and_remainder(a:int,b:int) -> Tuple[int,int]:
     """

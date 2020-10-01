@@ -62,8 +62,38 @@ def sort_array(arr: List[int]) -> List[int]:
     Sort given array without using sort()
     >>> sort_array([4,3,2,1])
     [1, 2, 3, 4]
+
+    Here, I'm going to use an algorithm called Merge Sort.
     """
-    return [1, 2, 3, 4]
+    if len(arr) > 1:
+        mid = len(arr) // 2
+        left = arr[:mid]
+        right = arr[mid:]
+        sort_array(left)
+        sort_array(right)
+        i = 0
+        j = 0
+        k = 0
+        len_left = len(left)
+        len_right = len(right)
+        while i < len_left and j < len_right:
+            if left[i] < right[j]:
+                arr[k] = left[i]
+                i += 1
+            else:
+                arr[k] = right[j]
+                j += 1
+            k += 1
+        while i < len_left:
+            arr[k] = left[i]
+            i += 1
+            k += 1
+        while j < len_right:
+            arr[k] = right[j]
+            j += 1
+            k += 1
+        
+    return arr
 
 
 def largest_element(arr: List[int]) -> int:
