@@ -30,8 +30,7 @@ def multfloat(a:float,b:float) -> float:
     15
     """
 
-    #Change the code below
-    return a*b
+    return a / (1 / b)
 
 def quotient_and_remainder(a:int,b:int) -> Tuple[int,int]:
     """
