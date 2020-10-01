@@ -5,7 +5,7 @@ def isEven(num:int) -> bool:
         True
     """
 
-    return True
+    return not (num&1)
 
 def isOdd(num:int) -> bool:
     """Add the missing code here to make sure that this 
