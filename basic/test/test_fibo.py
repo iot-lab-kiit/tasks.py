@@ -8,7 +8,7 @@ class FiboText(unittest.TestCase):
 
     def test_return(self):
         "Testing fibo(1) == 1"
-        self.assertEqual(fibonacci(number=19),55)
+        self.assertEqual(fibonacci(number=10),55)
 
     def test_sequence(self):
         "Testing if fibonacciSequence(10) returns [0,1,1,2,3,5,8,13,21,34,55]"
