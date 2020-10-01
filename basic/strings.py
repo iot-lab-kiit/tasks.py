@@ -21,3 +21,6 @@ def recursive_len(x):
         return 0
 
     return 1 + recursive_len(x[1:])
+
+def sort_string(x):
+    return "".join(sorted(i for i in x.lower()))
