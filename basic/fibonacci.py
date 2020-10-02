@@ -1,6 +1,5 @@
 from typing import List
 
-
 def fibonacci(number:int) -> int:
     """
     Returns the n'th fibonacci sequence number
@@ -10,7 +9,9 @@ def fibonacci(number:int) -> int:
     
     """
 
-    return 55
+    PHI = (1 + 5 ** 0.5) / 2
+    return int((PHI**number - (-PHI)**(-number))/(5**0.5))
+
 
 def fibonacciSequence(number:int) -> List[int]:
     """
@@ -18,8 +19,7 @@ def fibonacciSequence(number:int) -> List[int]:
     >>> fibonacciSequence(number=10)
     [0,1,1,2,3,5,8,13,21,34,55]
     """
-    return [0,1,1,2,3,5,8,13,21,34,55]
+    return [fibonacci(num) for num in range(number + 1)]
 
 
-if __name__ == "__main__":
-    fibonacci(number=55)    
+

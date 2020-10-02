@@ -3,9 +3,12 @@ def isEven(num:int) -> bool:
     function returns true only for even numbers
         >>> isEven(num=42)
         True
+
+        >>> isEven(num=3)
+        False
     """
 
-    return True
+    return not (num&1)
 
 def isOdd(num:int) -> bool:
     """Add the missing code here to make sure that this 
