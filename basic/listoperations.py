@@ -49,7 +49,7 @@ def calculateDifferenceBetweenTimePeriod(time1:str,time2:str) -> str:
     min2=int(l2[1])
     hr2=int(l2[0])
     if sec1>sec2:
-    sec=sec1-sec2
+        sec=sec1-sec2
     else:
         sec=sec2-sec1
     if min1>min2:
