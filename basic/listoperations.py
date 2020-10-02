@@ -46,4 +46,7 @@ def printOwnSourceCode():
     """
     Show the source code of this file
     """
+    with open(__file__) as f:
+        print(f.read(), end='')
+
 
