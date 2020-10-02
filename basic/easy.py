@@ -147,10 +147,10 @@ def number_of_vowels_and_consonants(string: str) -> Tuple[int, int]:
     (5, 5)
     """
     string = string.lower()
-    all_letters = set(string)
+    all_letters = set('abcdefghijklmnopqrstuvwxyz')
     vowels = set('aeiou')
-    vowel_count = sum([v in string for v in vowels])
-    consonant_count = sum([c in string for c in all_letters.difference(vowels)])
+    vowel_count = sum([string.count(v) for v in vowels])
+    consonant_count = sum([string.count(c) for c in all_letters.difference(vowels)])
     return vowel_count, consonant_count
 
 
