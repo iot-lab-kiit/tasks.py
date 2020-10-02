@@ -129,6 +129,7 @@ def number_of_elements(string: str) -> int:
 
 
     """
+    return(len(string))
 
 
 def largest_of_three(a: int, b: int, c: int) -> int:
@@ -137,7 +138,7 @@ def largest_of_three(a: int, b: int, c: int) -> int:
     >>> largest_of_three(1,2,3)
     3
     """
-    return 3
+    return(max(a,b,c))
 
 
 def number_of_vowels_and_consonants(string: str) -> Tuple[int, int]:
