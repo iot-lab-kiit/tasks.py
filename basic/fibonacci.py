@@ -7,21 +7,11 @@ def fibonacci(number:int) -> int:
     >>> fibonacci(number=10)
     55
     
-    """ 
-    a = 0
-    b = 1
-    if number < 0: 
-        return -1 
-    elif number == 0: 
-        return a 
-    elif number == 1: 
-        return b 
-    else: 
-        for _ in range(2, number+1): 
-            c = a + b 
-            a = b 
-            b = c 
-        return b
+    """
+
+    PHI = (1 + 5 ** 0.5) / 2
+    return int((PHI**number - (-PHI)**(-number))/(5**0.5))
+
 
 def fibonacciSequence(number:int) -> List[int]:
     """
@@ -29,8 +19,7 @@ def fibonacciSequence(number:int) -> List[int]:
     >>> fibonacciSequence(number=10)
     [0,1,1,2,3,5,8,13,21,34,55]
     """
-    return [0,1,1,2,3,5,8,13,21,34,55]
+    return [fibonacci(num) for num in range(number + 1)]
 
 
-if __name__ == "__main__":
-    print(fibonacci(number=10))
+
