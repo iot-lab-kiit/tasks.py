@@ -4,7 +4,7 @@ from typing import List, Tuple
 def countDistinct(arr: List[int]) -> int:
     """
     >>> countDistinct([1,2,2,3,4])
-    3
+    4
     """
     recorded = set()
     count = 0
