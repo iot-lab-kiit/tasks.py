@@ -4,7 +4,7 @@ def lcs(s1, s2) -> str:
      both the strings.
 
   >>> lcs(“ABCDGH”, “AEDFHR”) 
-      is “ADH" i.e. 3
+  3
   """
   cols = len(s1) + 1
   rows = len(s2) + 1
