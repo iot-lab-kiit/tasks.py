@@ -107,10 +107,7 @@ def largest_element(arr: List[int]) -> int:
     >>> largest_element([1,2,3,4,5])
     5
     """
-    mx = arr[0]
-    for i in arr:
-        mx = max(i, mx)
-    return mx
+    return(max(arr))
 
 
 def sum_array(arr: List[int]) -> int:
@@ -126,7 +123,8 @@ def sum_array(arr: List[int]) -> int:
 def number_of_elements(string: str) -> int:
     """
     Find number of elements in the string
-
+    >>> number_of_elements("iot lab kiit")
+    12
 
     """
     return(len(string))
@@ -160,3 +158,4 @@ def swap(a: int, b: int):
     Swap two numbers
     """
     a, b = b, a
+
