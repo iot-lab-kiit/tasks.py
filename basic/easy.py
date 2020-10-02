@@ -6,8 +6,13 @@ def countDistinct(arr: List[int]) -> int:
     >>> countDistinct([1,2,2,3,4])
     3
     """
-
-    return 3
+    recorded = set()
+    count = 0
+    for i in arr:
+        if i not in recorded:
+            count += 1
+            recorded.add(i)
+    return count
 
 
 def convertToUpperCase(string: str) -> str:
@@ -31,7 +36,7 @@ def findStringLength(string: str) -> int:
     >>> findStringLength("IoT Lab KiiT")
     12
     """
-    return 12
+    return len(string)
 
 
 def concatenate(string1: str, string2: str) -> str:
@@ -92,7 +97,7 @@ def sort_array(arr: List[int]) -> List[int]:
             arr[k] = right[j]
             j += 1
             k += 1
-        
+
     return arr
 
 
@@ -141,12 +146,16 @@ def number_of_vowels_and_consonants(string: str) -> Tuple[int, int]:
     >>> number_of_vowels_and_consonants("IoT Lab KiiT")
     (5, 5)
     """
-    return (5, 5)
+    string = string.lower()
+    all_letters = set(string)
+    vowels = set('aeiou')
+    vowel_count = sum([v in string for v in vowels])
+    consonant_count = sum([c in string for c in all_letters.difference(vowels)])
+    return vowel_count, consonant_count
 
 
 def swap(a: int, b: int):
     """
     Swap two numbers
     """
-    a,b = b,a
-
+    a, b = b, a
