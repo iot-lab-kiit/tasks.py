@@ -3,6 +3,9 @@ def isEven(num:int) -> bool:
     function returns true only for even numbers
         >>> isEven(num=42)
         True
+
+        >>> isEven(num=3)
+        False
     """
 
     return not (num&1)
