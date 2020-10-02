@@ -43,3 +43,9 @@ def time_difference(time1: str, time2: str, fmt: str = '%H:%M:%S') -> str:
     # Subtracts the largest from the smallest datetime object
     return str(max(d1, d2) - min(d1, d2))
 
+def self_source():
+    """
+    Prints the source code of this file
+    """
+    with open(__file__) as f:
+        print(f.read(), end='')

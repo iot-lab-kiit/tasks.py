@@ -28,9 +28,7 @@ def sortLexographic(string:str) -> List[str]:
     ['alphabetical', 'example', 'hello', 'how', 'in', 'is', 'manner', 'sort', 'the', 'this', 'to', 'word']
     """
 
-    string = string.split()
-    string = sorted(string)
-    return string
+    return sorted(string.split())
     
 def calculateDifferenceBetweenTimePeriod(time1:str,time2:str) -> str:
     """
