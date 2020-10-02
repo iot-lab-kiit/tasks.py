@@ -38,9 +38,35 @@ def calculateDifferenceBetweenTimePeriod(time1:str,time2:str) -> str:
     '23:59:59'
     """
     #Change below this
+    l1=time1.split(':')
+    l2=time2.split(":")
+    #for time1
+    sec1=int(l1[2])
+    min1=int(l1[1])
+    hr1=int(l1[0])
+    #for time 2
+    sec2=int(l2[2])
+    min2=int(l2[1])
+    hr2=int(l2[0])
+    if sec1>sec2:
+        sec=sec1-sec2
+    else:
+        sec=sec2-sec1
+    if min1>min2:
+        min3=min1-min2
+    else:
+        min3=min2-min1
+    if hr1>hr2:
+        hr=hr1-hr2
+    else:
+        hr=hr2-hr1
+    hr=str(hr)
+    min3=str(min3)
+    sec=str(sec)
+    string=hr+':'+min3+':'+sec
 
     
-    return "23:59:59"
+    return string
 
 def printOwnSourceCode():
     """
