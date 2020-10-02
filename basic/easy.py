@@ -107,10 +107,7 @@ def largest_element(arr: List[int]) -> int:
     >>> largest_element([1,2,3,4,5])
     5
     """
-    mx = arr[0]
-    for i in arr:
-        mx = max(i, mx)
-    return mx
+    return(max(arr))
 
 
 def sum_array(arr: List[int]) -> int:
@@ -129,7 +126,7 @@ def number_of_elements(string: str) -> int:
 
 
     """
-
+    
 
 def largest_of_three(a: int, b: int, c: int) -> int:
     """
@@ -159,3 +156,4 @@ def swap(a: int, b: int):
     Swap two numbers
     """
     a, b = b, a
+
