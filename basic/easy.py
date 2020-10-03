@@ -28,7 +28,7 @@ def sortListAlphabetical(arr: List[str]) -> List[str]:
     >>> sortListAlphabetical(["welcome","to","open","source"])
     ['open', 'source', 'to', 'welcome']
     """
-    return ['open', 'source', 'to', 'welcome']
+    return sorted(arr, key=str.lower)
 
 
 def findStringLength(string: str) -> int:
