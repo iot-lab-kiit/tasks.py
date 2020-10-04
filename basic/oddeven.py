@@ -7,8 +7,11 @@ def isEven(num:int) -> bool:
         >>> isEven(num=3)
         False
     """
-
-    return not (num&1)
+    if( num % 2 == 0):
+        return True
+    else:
+        return False
+        
 
 def isOdd(num:int) -> bool:
     """Add the missing code here to make sure that this 
