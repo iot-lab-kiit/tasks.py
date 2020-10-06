@@ -13,25 +13,56 @@ def factorial(n:int) -> int:
         return 1
     return n * factorial(n-1)
 
-def permutation(n:int,r:int) -> int:
+
+def permutation(n: int, r: int) -> int:
     """
     Returns the permutation i.e nPr of given 
     n and r
     >>> permutation(5,3)
     60
     """
+    # If either n or r is 0, nPr = 1
+    if n == 0 or r == 0:
+        return 1
 
-    return math.floor(factorial(n) / factorial(n-r))
+    # Initializing varibales
+    nFac = 1
+    nrFac = 1
 
-def combination(n:int,r:int) -> int:
+    # A single for loop to compute both required values
+    for i in range(1, n+1):
+        nFac *= i
+        if i == (n-r):
+            nrFac = nFac
+
+    return nFac//nrFac
+
+
+def combination(n: int, r: int) -> int:
     """
     Returns the combination i.e nCr of given
     n and r
     >>> combination(5,3)
     10
     """
-    
-    return int(factorial(n) / (factorial(r) * factorial(n-r)))
+    # If either n or r is 0, nCr = 1
+    if n == 0 or r == 0:
+        return 1
+
+    # Initializing variables
+    nFac = 1
+    rFac = 1
+    nrFac = 1
+
+    # A single for loop to compute all three required values
+    for i in range(1, n+1):
+        nFac *= i
+        if i == r:
+            rFac = nFac
+        if i == (n-r):
+            nrFac = nFac
+
+    return nFac//(rFac * nrFac)
 
 def multfloat(a:float,b:float) -> float:
     """
