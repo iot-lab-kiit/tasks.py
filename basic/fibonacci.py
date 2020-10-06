@@ -1,6 +1,10 @@
 from typing import List
 
 def matrixMul(a, b):
+    """
+    Returns the product of the given matrices
+    
+    """
     # Initializing Empty Matrix
     c = [[0, 0], [0, 0]]
     # 2x2 matrix multiplication. Essentially O(1)
@@ -13,6 +17,13 @@ def matrixMul(a, b):
     return c
 
 def fibonacci(number:int) -> int:
+    """
+    Returns the n'th fibonacci sequence number
+    
+    >>> fibonacci(number=10)
+    55
+    
+    """
     # Initializing Magic Matrix
     a = [[1, 1, ], [1, 0]]
     # Initializing Identity Matrix
