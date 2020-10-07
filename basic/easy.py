@@ -135,3 +135,7 @@ def swap(a: int, b: int):
     """
     a, b = b, a
 
+str=input("Enter the string:" )
+
+print("Converted String:") 
+print(str.upper())
