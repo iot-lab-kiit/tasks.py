@@ -2,17 +2,26 @@ import math
 from typing import Tuple
 
 
-def factorial(n:int) -> int:
+def fact(n):
     """
     Returns the factorial of given n
     >>> factorial(6)
     720
     """
+    res = 1
 
-    if (n<=1):
-        return 1
-    return n * factorial(n-1)
+    for i in range(2, n + 1):
+        res *= i
 
+def combination(n, r):
+    """
+    Returns the combination i.e nCr of given
+    n and r
+    >>> combination(5,3)
+    10
+    """
+    # If either n or r is 0, nCr = 1
+    return fact(n) / (fact(r) * fact(n - r))
 
 def permutation(n: int, r: int) -> int:
     """
@@ -38,31 +47,7 @@ def permutation(n: int, r: int) -> int:
     return nFac//nrFac
 
 
-def combination(n: int, r: int) -> int:
-    """
-    Returns the combination i.e nCr of given
-    n and r
-    >>> combination(5,3)
-    10
-    """
-    # If either n or r is 0, nCr = 1
-    if n == 0 or r == 0:
-        return 1
 
-    # Initializing variables
-    nFac = 1
-    rFac = 1
-    nrFac = 1
-
-    # A single for loop to compute all three required values
-    for i in range(1, n+1):
-        nFac *= i
-        if i == r:
-            rFac = nFac
-        if i == (n-r):
-            nrFac = nFac
-
-    return nFac//(rFac * nrFac)
 
 def multfloat(a:float,b:float) -> float:
     """
