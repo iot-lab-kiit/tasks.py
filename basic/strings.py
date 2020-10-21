@@ -43,6 +43,33 @@ def time_difference(time1: str, time2: str, fmt: str = '%H:%M:%S') -> str:
     # Subtracts the largest from the smallest datetime object
     return str(max(d1, d2) - min(d1, d2))
 
+def get_all_substrings_of_String_in_array(x):
+    """Get all the possible substrings of a given string in an array
+       Note : Existing function required in current file - recursive_len(x)
+
+        Example:
+        >>> a="abcd"
+        >>> get_all_substrings_of_String_in_array(a)
+        ['a', 'b', 'c', 'd', 'ab', 'bc', 'cd', 'abc', 'bcd', 'abcd']
+    """
+    if x=="":
+        return "Empty String"
+    n=recursive_len(x);
+    arrret=[]
+    strapp=""
+    for i in range(1,n+1):
+
+        for j in range(n-i+1):
+
+            k=j+i-1
+
+            for l in range(j,k+1):
+                strapp=strapp+x[l]
+                
+            arrret.append(strapp)
+            strapp=""
+    return arrret
+
 def self_source():
     """
     Prints the source code of this file
