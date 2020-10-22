@@ -33,6 +33,9 @@ def main():
     25. Find if given number is odd
     26. Find n'th fibonacci number for given n
     27. Return fibonacci sequence up to the given number
+    28. Find all possible sub strings
+    29. Find if a string contains another string
+    30. Find length of list by iteration
     """)
 
 

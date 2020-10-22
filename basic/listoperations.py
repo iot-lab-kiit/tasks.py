@@ -94,6 +94,20 @@ def calculateDifferenceBetweenTimePeriod(time1: str, time2: str) -> str:
 
     return string
 
+def getSize(l):
+    """
+    Returns size of list
+
+    Example
+    >>> getSize([0,4,32,21])
+    4
+    """
+    c=0
+    for i in l:
+        c=c+1
+    return c
+     
+        
 
 def printOwnSourceCode():
     """

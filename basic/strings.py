@@ -70,6 +70,24 @@ def get_all_substrings_of_String_in_array(x):
             strapp=""
     return arrret
 
+def containstring(strtocheckinanother,checkstr):
+    """Check if a string contains substring or not
+        return True if string is a substring else return False
+        Note: Dependent on 'get_all_substrings_of_String_in_array(checkstr)' method
+
+        Example:
+        >>> containstring("ello","Hello")
+        True
+    """
+    a=False
+    allsub=get_all_substrings_of_String_in_array(checkstr)
+    for i in allsub:
+        if(i==strtocheckinanother):
+            a=True
+            break
+    return a
+            
+
 def self_source():
     """
     Prints the source code of this file
